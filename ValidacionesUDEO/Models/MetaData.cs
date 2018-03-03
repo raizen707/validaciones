@@ -50,6 +50,8 @@ namespace ValidacionesUDEO.Models
 
         [StringLength(10)]
         public string textoPequenio { get; set; }
+        [Required]
+        [StringLength(20, ErrorMessage = "Ingrese un string entre 1 y 20 caracteres"), Display(Name = "Texto de 20 caracreres maximo")]
         public string textMediano { get; set; }
         public string textoGrande { get; set; }
         public string tarjetaDeCredito { get; set; }
