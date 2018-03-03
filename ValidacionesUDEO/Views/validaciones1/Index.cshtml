@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ValidacionesUDEO.Models.validaciones1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+        @ViewData["Message"]
+    <br />
+    @ViewBag.Name
+    <br />
+    @TempData["ModelName"]
+</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.edad2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fecha2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.textoPequenio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.textMediano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.textoGrande)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tarjetaDeCredito)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.password2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.edad2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecha2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.textoPequenio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.textMediano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.textoGrande)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tarjetaDeCredito)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.usuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.usuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.usuario })
+        </td>
+    </tr>
+}
+
+</table>
